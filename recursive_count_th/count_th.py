@@ -6,9 +6,12 @@ Your function must utilize recursion. It cannot contain any loops.
 def count_th(word):
     
     # TBC
+    # Base line:
     if not word:
         return 0
-    if word.islower():
-        return word.count('th')
+    i = 0
+    # slice the word and check the 1st 2 letters, then next ...:
+    if word[i:2] == 'th':
+        return 1 + count_th(word[i+1:])
     else:
-        return count_th(word.lower())
+        return count_th(word[i+1:])

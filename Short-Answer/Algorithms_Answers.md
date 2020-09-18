@@ -24,3 +24,5 @@ The best algorithm to use in this problem is the binary search:
    - otherwide if the egg does not break, we elemenate the lower floors and we search up, between n+1 and the last floor.
    - and we repeat the process for our new range of search, find the midpoit and check..
    - Once we found the last floor where the egg does not break, we return the answer as list of floors starting from 0 to n-target.
+
+   the time complexity for this algorithm is O(log n)
