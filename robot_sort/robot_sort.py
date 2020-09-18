@@ -97,23 +97,22 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        
-        # while SortingRobot.compare_item(self) == 1:
-        #     return SortingRobot.swap_item(self)
-        #     if SortingRobot.move_right(self) == True:
-        #         SortingRobot.compare_item(SortingRobot.sort(self))
-        #     else:
-        #         return SortingRobot.sort(self)
-            # if SortingRobot.compare_item(self) == -1:
-            #     break
 
-        # attempt 1:  
-        #Base case if robot connot is at the end of the list, returns:  
-        if self.can_move_right() == False:
-            return
-        if self.compare_item() == 1:
+        self.set_light_on()
+        while self.light_is_on():
+            self.set_light_off()
             self.swap_item()
-        else:
+            while self.can_move_right():
+                self.move_right()
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.set_light_on()
+            while self.can_move_left():
+                if self.compare_item() == None:
+                    break
+                else:
+                    self.move_left()
+            self.swap_item()
             self.move_right()
 
 

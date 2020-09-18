@@ -6,7 +6,7 @@ a) The time complexity for while loop is O(n), this mean the algorithm will walk
    the range of 0 and n*n*n.
 
 
-b) The time complexity of the this function is O(n^2), because it has loop inside a loop.
+b) The time complexity of the this function is O(nlog n), because it has loop inside a loop.
    The for loop time complexity is O(n) and the for while loop is also O(n).
 
 
