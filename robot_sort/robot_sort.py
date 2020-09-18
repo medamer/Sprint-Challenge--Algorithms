@@ -97,7 +97,13 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        #Base case if robot connot is at the end of the list, returns:
+        if SortingRobot.can_move_right(self) == False:
+            return
+        if SortingRobot.compare_item(self) == -1:
+            SortingRobot.swap_item(self)
+        else:
+            SortingRobot.move_right(self)
 
 
 if __name__ == "__main__":
